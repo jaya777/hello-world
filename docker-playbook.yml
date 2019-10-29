@@ -1,7 +1,7 @@
- ---
-  - hosts: web
-    become: true
-    tasks:
+---
+ - hosts: web
+   become: true
+   tasks:
 
      - name: create docker image
        shell: docker run -d --name my-image -p 8090:8080 jayaraju/dev
