@@ -1,0 +1,13 @@
+ ---
+  - hosts: web-servers
+    become: true
+    tasks:
+     - name: stop previous version docker
+       shell: docker stop jayaraju/dev
+     - name: remove stopped container
+       shell: docker rm -f jayaraju/dev	  
+     - name: remove docker images
+       shell: docker image rm -f jayaraju/dev
+       
+     - name: create docker image
+       shell: docker run -d --name my-image -p 8090:8080 jayaraju/dev
