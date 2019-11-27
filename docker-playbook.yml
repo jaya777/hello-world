@@ -4,4 +4,4 @@
    tasks:
 
      - name: create docker image
-       shell: docker run -d --name my-image -p 8090:8080 jayaraju/my-new
+       shell: docker run -d --name my-image -p 8070:8080 jayaraju/my-new
